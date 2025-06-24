@@ -1,0 +1,4 @@
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/edit_cache.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dynamics_compensation.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/rebuild_cache.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_id_control.dir
