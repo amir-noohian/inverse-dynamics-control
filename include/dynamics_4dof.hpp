@@ -22,7 +22,7 @@
 #include <barrett/systems.h>
 #include <barrett/math/kinematics.h> 
 
-#include <beta_ols.hpp>
+#include <beta.hpp>
 #include <W.hpp>
 
 using namespace barrett;

@@ -10,6 +10,14 @@
 eigen3/Eigen/Dense
 -
 
+../include/W.hpp
+eigen3/Eigen/Dense
+-
+array
+-
+cmath
+-
+
 ../include/Y_4dof.hpp
 eigen3/Eigen/Dense
 -
@@ -18,10 +26,28 @@ array
 cmath
 -
 
+../include/beta.hpp
+eigen3/Eigen/Dense
+-
+
 ../include/constant_vel_refference_traj.hpp
 barrett/units.h
 -
 barrett/systems.h
+-
+
+../include/dynamics_4dof.hpp
+eigen3/Eigen/Dense
+-
+barrett/units.h
+-
+barrett/systems.h
+-
+barrett/math/kinematics.h
+-
+beta.hpp
+-
+W.hpp
 -
 
 ../include/dynamics_4dof_old.hpp
@@ -48,6 +74,8 @@ cmath
 
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/4dof_id_control.cpp
 dynamics_4dof_old.hpp
+-
+dynamics_4dof.hpp
 -
 constant_vel_refference_traj.hpp
 -

@@ -359,7 +359,8 @@ void calculate_W(const double q[4], const double dq[4],
     H[8] = 0;
     H[9] = 0;
     H[10] = dq[0];
-    H[11] = (((dq[0]) > 0) - ((dq[0]) < 0));
+    // H[11] = (((dq[0]) > 0) - ((dq[0]) < 0));
+    H[11] = std::tanh(100.0 * dq[0]);
     H[12] = -x11*x3 - x7*x8;
     H[13] = -x3*(x13 - x14) - x7*(ddq[1] + x12);
     H[14] = -x3*(x6 + x8) - x7*(x10 + x15);
@@ -420,6 +421,7 @@ void calculate_W(const double q[4], const double dq[4],
     H[69] = 0;
     H[70] = dq[1];
     H[71] = (((dq[1]) > 0) - ((dq[1]) < 0));
+    H[71] = std::tanh(100.0 * dq[1]);
     H[72] = x22*x38 + x23*x32;
     H[73] = x22*x47 + x23*x43;
     H[74] = x22*x59 + x23*x56;
@@ -479,7 +481,8 @@ void calculate_W(const double q[4], const double dq[4],
     H[128] = 0.044999999999999998*x96 + x99;
     H[129] = 0.044999999999999998*x87;
     H[130] = dq[2];
-    H[131] = (((dq[2]) > 0) - ((dq[2]) < 0));
+    // H[131] = (((dq[2]) > 0) - ((dq[2]) < 0));
+    H[131] = std::tanh(100.0 * dq[2]);
     H[132] = x114;
     H[133] = x125;
     H[134] = x138;
@@ -539,18 +542,51 @@ void calculate_W(const double q[4], const double dq[4],
     H[188] = x192 + 0.044999999999999998*x193;
     H[189] = 0.044999999999999998*x175;
     H[190] = dq[3];
-    H[191] = (((dq[3]) > 0) - ((dq[3]) < 0));
+    // H[191] = (((dq[3]) > 0) - ((dq[3]) < 0));
+    H[191] = std::tanh(100.0 * dq[3]);
 
-    for (int i{0}; i < 4; i++) {
-        for (int i1 = 0; i1 < 30; i1++) {
-        double d = 0.0;
-        for (int i2 = 0; i2 < 48; i2++) {
-            d += H[i + (i2 << 2)] * static_cast<double>(Pb[i2 + 48 * i1]);
-            std::cout << H[i + (i2 << 2)] << std::endl;
-        }
-        W[i + (i1 << 2)] = d;
+    // for (int i{0}; i < 4; i++) {
+    //     for (int i1 = 0; i1 < 30; i1++) {
+    //     double d = 0.0;
+    //     for (int i2 = 0; i2 < 48; i2++) {
+    //         d += H[i + (i2 << 2)] * static_cast<double>(Pb[i2 + 48 * i1]);
+    //         // std::cout << H[i + (i2 << 2)] << std::endl;
+    //     }
+    //     W[i + (i1 << 2)] = d;
+    //     }
+    // }
+
+
+
+    // for (int i = 0; i < 4; ++i) {               // row of H, and of W
+    //     for (int j = 0; j < 30; ++j) {          // column of Pb, and of W
+    //         double sum = 0.0;
+    //         for (int k = 0; k < 48; ++k) {      // shared dimension
+    //             double h_val = H[i + k * 4];            // H[i][k] in column-major
+    //             double pb_val = static_cast<double>(Pb[k + j * 48]); // Pb[k][j]
+    //             sum += h_val * pb_val;
+    //         }
+    //         W[i + j * 4] = sum;  // Store in column-major format
+    //     }
+    // }
+
+    for (int i = 0; i < 4; ++i) {               // row of H and W
+        for (int j = 0; j < 30; ++j) {          // column of Pb and W
+            double sum = 0.0;
+            for (int k = 0; k < 48; ++k) {      // shared dimension
+                double h_val = H[i * 48 + k];             // H[i][k] in row-major
+                double pb_val = static_cast<double>(Pb[k * 30 + j]); // Pb[k][j] in row-major
+                sum += h_val * pb_val;
+            }
+            W[i * 30 + j] = sum;  // W[i][j] in row-major
         }
     }
+
+    // for (int i = 0; i < 120; ++i) {
+    //     std::cout << W[i];
+    //     if (i < 120) std::cout << " ";
+    // }
+    // std::cout << std::endl;
 
 }
 
@@ -580,7 +616,11 @@ Eigen::MatrixXd calculate_W_eigen(const Eigen::VectorXd& q,
     calculate_W(q_arr.data(), dq_arr.data(), ddq_arr.data(), W_arr.data());
 
     // Convert output to Eigen::MatrixXd (4x30 structure)
-    Eigen::MatrixXd W = Eigen::Map<Eigen::MatrixXd>(W_arr.data(), 4, 30);
+    // Eigen::MatrixXd W = Eigen::Map<Eigen::MatrixXd>(W_arr.data(), 4, 30);
+    Eigen::Map<Eigen::Matrix<double, 4, 30, Eigen::RowMajor>> W(W_arr.data());
+    // Eigen::MatrixXd W_temp = Eigen::Map<Eigen::MatrixXd>(W_arr.data(), 30, 4);
+    // Eigen::MatrixXd W = W_temp.transpose();
+    // std::cout << "eigen_W" << W << std::endl;
 
     return W;
 }

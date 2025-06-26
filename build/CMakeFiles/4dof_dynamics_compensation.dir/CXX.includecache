@@ -6,16 +6,16 @@
 
 #IncludeRegexTransform: 
 
-../include/PI_4dof.hpp
-eigen3/Eigen/Dense
--
-
-../include/Y_4dof.hpp
+../include/W.hpp
 eigen3/Eigen/Dense
 -
 array
 -
 cmath
+-
+
+../include/beta.hpp
+eigen3/Eigen/Dense
 -
 
 ../include/constant_vel_refference_traj.hpp
@@ -24,7 +24,7 @@ barrett/units.h
 barrett/systems.h
 -
 
-../include/dynamics_4dof_old.hpp
+../include/dynamics_4dof.hpp
 eigen3/Eigen/Dense
 -
 barrett/units.h
@@ -33,9 +33,9 @@ barrett/systems.h
 -
 barrett/math/kinematics.h
 -
-PI_4dof.hpp
+beta.hpp
 -
-Y_4dof.hpp
+W.hpp
 -
 
 ../include/sin_jp_trajectory.hpp
@@ -47,7 +47,7 @@ cmath
 -
 
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/4dof_dynamics_compensation.cpp
-dynamics_4dof_old.hpp
+dynamics_4dof.hpp
 -
 constant_vel_refference_traj.hpp
 -

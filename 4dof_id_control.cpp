@@ -6,8 +6,8 @@
  */
 
 
-// #include <dynamics_4dof.hpp>
 #include <dynamics_4dof_old.hpp>
+#include <dynamics_4dof.hpp>
 #include <constant_vel_refference_traj.hpp>
 #include <sin_jp_trajectory.hpp>
 #include <unistd.h>
@@ -54,6 +54,8 @@ public:
 
 public:
 	Input<jt_type> feedFWDInput; //Inverse Dynamic Feed FWD
+	Input<jt_type> gravityInput; //Gravity Term Input from WAM
+
 
 // IO  (outputs)
 public:
@@ -67,14 +69,14 @@ jt_type computedT;
 
 public:
 	explicit JsIDController(Eigen::MatrixXd proportionalGains, Eigen::MatrixXd dampingGains/*, float kpCoeff, float KdCoeff*/, const std::string& sysName = "JsIDController"):
-		System(sysName), refJPInput(this), refJVInput(this), feedbackjpInput(this), feedbackjvInput(this), controlJtOutput(this, &controlJtOutputValue), feedFWDInput(this), kp(proportionalGains), kd(dampingGains)/*, kpCf(kpCoeff), kdCf(KdCoeff)*/{}
+		System(sysName), refJPInput(this), refJVInput(this), feedbackjpInput(this), feedbackjvInput(this), controlJtOutput(this, &controlJtOutputValue), feedFWDInput(this), gravityInput(this), kp(proportionalGains), kd(dampingGains)/*, kpCf(kpCoeff), kdCf(KdCoeff)*/{}
 
 	virtual ~JsIDController() { this->mandatoryCleanUp(); }
 
 protected:
 	float kpCf, kdCf; 
 	sqm_type kp, kd;
-	jt_type jt_out, feedFWD;
+	jt_type jt_out, feedFWD, gravity;
 	jp_type jp_sys, jp_ref;
 	jv_type jv_sys, jv_ref;
 	ja_type ja_ref;
@@ -90,8 +92,9 @@ protected:
 
 		/*Taking feed forward term from the input terminal of this system*/
 		feedFWD = this->feedFWDInput.getValue();
+		gravity = this->gravityInput.getValue();
 
-		jt_out = 1 * feedFWD + kp * (jp_ref - jp_sys) + kd * (jv_ref - jv_sys);
+		jt_out = 1 * feedFWD - 1 * gravity +  kp * (jp_ref - jp_sys) + kd * (jv_ref - jv_sys);
 
 		computedT = jt_out;
 		
@@ -179,8 +182,8 @@ int wam_main(int argc, char** argv, ProductManager& pm,	systems::Wam<DOF>& wam) 
     // }
 
 	v_type A;
-	A << 0.0, 0.4 , 0.0, 0.4, 0.0, 0.0, 0.0;
-	double f = 0.05;
+	A << 0.0, 0.4 , 0.0, -0.4, 0.0, 0.0, 0.0;
+	double f = 0.1;
 	sinJpRefTrajectory<DOF> refTraj(start_pos, A, f);
 
 	// //Const Vel Trajectory
@@ -211,9 +214,10 @@ int wam_main(int argc, char** argv, ProductManager& pm,	systems::Wam<DOF>& wam) 
 	// kd << 10,   20,    5,    2,  0.5,  0.5, 0.05; //10 1
 	JsIDController<DOF> IDController(kp.asDiagonal(),kd.asDiagonal());//, inputs1[0], inputs1[1]);
 	Dynamics<DOF> wam4dofDynamics;
+	// DynamicsOld<DOF> wam4dofDynamicsOld;
 	jt_type jtLimits;
-	jtLimits << 50, 40, 30, 30, 10, 10, 10;
-	systems::Callback<jt_type> jtSat(boost::bind(saturateJt<DOF>,_1, 0.5*jtLimits));
+	jtLimits << 25, 20, 15, 15, 5, 5, 5;
+	systems::Callback<jt_type> jtSat(boost::bind(saturateJt<DOF>,_1, 1*jtLimits));
 	systems::Ramp time(pm.getExecutionManager(), 1.0);
 
 	systems::PrintToStream<jt_type> printID(pm.getExecutionManager(), "ID: ");
@@ -251,11 +255,16 @@ int wam_main(int argc, char** argv, ProductManager& pm,	systems::Wam<DOF>& wam) 
     systems::connect(refTraj.referenceATrack, wam4dofDynamics.jaInputDynamics);
 
     systems::connect(wam4dofDynamics.dynamicsFeedFWD, IDController.feedFWDInput);
+	systems::connect(wam.gravity.output, IDController.gravityInput);
 	systems::connect(wam.jpOutput, IDController.feedbackjpInput);
 	systems::connect(wam.jvOutput, IDController.feedbackjvInput);
     systems::connect(IDController.controlJtOutput, jtSat.input);
 
-	systems::connect(wam4dofDynamics.dynamicsFeedFWD, printID.input);
+	// systems::connect(wam4dofDynamics.dynamicsFeedFWD, printID.input);
+
+	// systems::connect(refTraj.referencePTrack, wam4dofDynamics.jpInputDynamics);
+	// systems::connect(refTraj.referenceVTrack, wam4dofDynamics.jvInputDynamics);
+    // systems::connect(refTraj.referenceATrack, wam4dofDynamics.jaInputDynamics);
 
 //	RT Logging stuff
 	systems::Ramp timelog(pm.getExecutionManager(), 1.0);
@@ -289,6 +298,7 @@ int wam_main(int argc, char** argv, ProductManager& pm,	systems::Wam<DOF>& wam) 
 	
 	std::cout<<"Press [Enter] to start."<<std::endl;
 	detail::waitForEnter();
+	// wam.gravityCompensate(false);
 	time.start();
 	usleep(2500);
 	wam.trackReferenceSignal(jtSat.output); // Put it after time start so that feefwd term is active when we start applying torque.

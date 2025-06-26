@@ -1,5 +1,5 @@
-#ifndef DYNAMICS_H_
-#define DYNAMICS_H_
+#ifndef DYNAMICS_OLD_H_
+#define DYNAMICS_OLD_H_
 
 // #include <barrett/math/traits.h>
 // #include <list>
@@ -26,7 +26,7 @@
 using namespace barrett;
 
 template<size_t DOF>
-class Dynamics: public systems::System {
+class DynamicsOld: public systems::System {
 
 	BARRETT_UNITS_TEMPLATE_TYPEDEFS(DOF);
 
@@ -42,14 +42,14 @@ protected:
 	typename Output<jt_type>::Value* dynamicsFeedFWDValue;
 
 public:
-	explicit Dynamics(/*systems::ExecutionManager* em*/) :
+	explicit DynamicsOld(/*systems::ExecutionManager* em*/) :
 			jpInputDynamics(this), jvInputDynamics(this), jaInputDynamics(this), dynamicsFeedFWD(this,
 					&dynamicsFeedFWDValue) {
 	//		      em->startManaging(*this);
 //		    }
 	}
 
-	virtual ~Dynamics() {
+	virtual ~DynamicsOld() {
 		this->mandatoryCleanUp();
 	}
 
@@ -87,6 +87,6 @@ protected:
 
 	}
 private:
-	DISALLOW_COPY_AND_ASSIGN(Dynamics);
+	DISALLOW_COPY_AND_ASSIGN(DynamicsOld);
 };
-#endif /* DYNAMICS_H_ */
+#endif /* DYNAMICS_Old_H_ */

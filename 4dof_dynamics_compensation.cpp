@@ -6,7 +6,7 @@
  */
 
 
-#include <dynamics_4dof_old.hpp>
+#include <dynamics_4dof.hpp>
 #include <constant_vel_refference_traj.hpp>
 #include <sin_jp_trajectory.hpp>
 #include <unistd.h>
