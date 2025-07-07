@@ -545,31 +545,6 @@ void calculate_W(const double q[4], const double dq[4],
     // H[191] = (((dq[3]) > 0) - ((dq[3]) < 0));
     H[191] = std::tanh(100.0 * dq[3]);
 
-    // for (int i{0}; i < 4; i++) {
-    //     for (int i1 = 0; i1 < 30; i1++) {
-    //     double d = 0.0;
-    //     for (int i2 = 0; i2 < 48; i2++) {
-    //         d += H[i + (i2 << 2)] * static_cast<double>(Pb[i2 + 48 * i1]);
-    //         // std::cout << H[i + (i2 << 2)] << std::endl;
-    //     }
-    //     W[i + (i1 << 2)] = d;
-    //     }
-    // }
-
-
-
-    // for (int i = 0; i < 4; ++i) {               // row of H, and of W
-    //     for (int j = 0; j < 30; ++j) {          // column of Pb, and of W
-    //         double sum = 0.0;
-    //         for (int k = 0; k < 48; ++k) {      // shared dimension
-    //             double h_val = H[i + k * 4];            // H[i][k] in column-major
-    //             double pb_val = static_cast<double>(Pb[k + j * 48]); // Pb[k][j]
-    //             sum += h_val * pb_val;
-    //         }
-    //         W[i + j * 4] = sum;  // Store in column-major format
-    //     }
-    // }
-
     for (int i = 0; i < 4; ++i) {               // row of H and W
         for (int j = 0; j < 30; ++j) {          // column of Pb and W
             double sum = 0.0;
@@ -582,18 +557,8 @@ void calculate_W(const double q[4], const double dq[4],
         }
     }
 
-    // for (int i = 0; i < 120; ++i) {
-    //     std::cout << W[i];
-    //     if (i < 120) std::cout << " ";
-    // }
-    // std::cout << std::endl;
-
 }
 
-// extern "C" {
-//     void calculate_Y(const double theta[4], const double thetad[4],
-//                      const double thetadd[4], double Y_b[120]); // Y_b is 4*30 (120 elements)
-// }
 
 Eigen::MatrixXd calculate_W_eigen(const Eigen::VectorXd& q, 
                                   const Eigen::VectorXd& dq, 
@@ -615,12 +580,8 @@ Eigen::MatrixXd calculate_W_eigen(const Eigen::VectorXd& q,
     // Call the C function
     calculate_W(q_arr.data(), dq_arr.data(), ddq_arr.data(), W_arr.data());
 
-    // Convert output to Eigen::MatrixXd (4x30 structure)
-    // Eigen::MatrixXd W = Eigen::Map<Eigen::MatrixXd>(W_arr.data(), 4, 30);
     Eigen::Map<Eigen::Matrix<double, 4, 30, Eigen::RowMajor>> W(W_arr.data());
-    // Eigen::MatrixXd W_temp = Eigen::Map<Eigen::MatrixXd>(W_arr.data(), 30, 4);
-    // Eigen::MatrixXd W = W_temp.transpose();
-    // std::cout << "eigen_W" << W << std::endl;
+
 
     return W;
 }

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/b
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,84 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 4dof_dynamics_compensation
+# Target rules for targets named 4dof_gravcomp_ares
 
 # Build rule for target.
-4dof_dynamics_compensation: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 4dof_dynamics_compensation
-.PHONY : 4dof_dynamics_compensation
+4dof_gravcomp_ares: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_gravcomp_ares
+.PHONY : 4dof_gravcomp_ares
 
 # fast build rule for target.
-4dof_dynamics_compensation/fast:
-	$(MAKE) -f CMakeFiles/4dof_dynamics_compensation.dir/build.make CMakeFiles/4dof_dynamics_compensation.dir/build
-.PHONY : 4dof_dynamics_compensation/fast
+4dof_gravcomp_ares/fast:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/build
+.PHONY : 4dof_gravcomp_ares/fast
 
 #=============================================================================
-# Target rules for targets named 4dof_id_control
+# Target rules for targets named 4dof_gravcomp_zeus
 
 # Build rule for target.
-4dof_id_control: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 4dof_id_control
-.PHONY : 4dof_id_control
+4dof_gravcomp_zeus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_gravcomp_zeus
+.PHONY : 4dof_gravcomp_zeus
 
 # fast build rule for target.
-4dof_id_control/fast:
-	$(MAKE) -f CMakeFiles/4dof_id_control.dir/build.make CMakeFiles/4dof_id_control.dir/build
-.PHONY : 4dof_id_control/fast
+4dof_gravcomp_zeus/fast:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/build
+.PHONY : 4dof_gravcomp_zeus/fast
 
-4dof_dynamics_compensation.o: 4dof_dynamics_compensation.cpp.o
+4dof_gravcomp_ares.o: 4dof_gravcomp_ares.cpp.o
 
-.PHONY : 4dof_dynamics_compensation.o
-
-# target to build an object file
-4dof_dynamics_compensation.cpp.o:
-	$(MAKE) -f CMakeFiles/4dof_dynamics_compensation.dir/build.make CMakeFiles/4dof_dynamics_compensation.dir/4dof_dynamics_compensation.cpp.o
-.PHONY : 4dof_dynamics_compensation.cpp.o
-
-4dof_dynamics_compensation.i: 4dof_dynamics_compensation.cpp.i
-
-.PHONY : 4dof_dynamics_compensation.i
-
-# target to preprocess a source file
-4dof_dynamics_compensation.cpp.i:
-	$(MAKE) -f CMakeFiles/4dof_dynamics_compensation.dir/build.make CMakeFiles/4dof_dynamics_compensation.dir/4dof_dynamics_compensation.cpp.i
-.PHONY : 4dof_dynamics_compensation.cpp.i
-
-4dof_dynamics_compensation.s: 4dof_dynamics_compensation.cpp.s
-
-.PHONY : 4dof_dynamics_compensation.s
-
-# target to generate assembly for a file
-4dof_dynamics_compensation.cpp.s:
-	$(MAKE) -f CMakeFiles/4dof_dynamics_compensation.dir/build.make CMakeFiles/4dof_dynamics_compensation.dir/4dof_dynamics_compensation.cpp.s
-.PHONY : 4dof_dynamics_compensation.cpp.s
-
-4dof_id_control.o: 4dof_id_control.cpp.o
-
-.PHONY : 4dof_id_control.o
+.PHONY : 4dof_gravcomp_ares.o
 
 # target to build an object file
-4dof_id_control.cpp.o:
-	$(MAKE) -f CMakeFiles/4dof_id_control.dir/build.make CMakeFiles/4dof_id_control.dir/4dof_id_control.cpp.o
-.PHONY : 4dof_id_control.cpp.o
+4dof_gravcomp_ares.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/4dof_gravcomp_ares.cpp.o
+.PHONY : 4dof_gravcomp_ares.cpp.o
 
-4dof_id_control.i: 4dof_id_control.cpp.i
+4dof_gravcomp_ares.i: 4dof_gravcomp_ares.cpp.i
 
-.PHONY : 4dof_id_control.i
+.PHONY : 4dof_gravcomp_ares.i
 
 # target to preprocess a source file
-4dof_id_control.cpp.i:
-	$(MAKE) -f CMakeFiles/4dof_id_control.dir/build.make CMakeFiles/4dof_id_control.dir/4dof_id_control.cpp.i
-.PHONY : 4dof_id_control.cpp.i
+4dof_gravcomp_ares.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/4dof_gravcomp_ares.cpp.i
+.PHONY : 4dof_gravcomp_ares.cpp.i
 
-4dof_id_control.s: 4dof_id_control.cpp.s
+4dof_gravcomp_ares.s: 4dof_gravcomp_ares.cpp.s
 
-.PHONY : 4dof_id_control.s
+.PHONY : 4dof_gravcomp_ares.s
 
 # target to generate assembly for a file
-4dof_id_control.cpp.s:
-	$(MAKE) -f CMakeFiles/4dof_id_control.dir/build.make CMakeFiles/4dof_id_control.dir/4dof_id_control.cpp.s
-.PHONY : 4dof_id_control.cpp.s
+4dof_gravcomp_ares.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/4dof_gravcomp_ares.cpp.s
+.PHONY : 4dof_gravcomp_ares.cpp.s
+
+4dof_gravcomp_zeus.o: 4dof_gravcomp_zeus.cpp.o
+
+.PHONY : 4dof_gravcomp_zeus.o
+
+# target to build an object file
+4dof_gravcomp_zeus.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/4dof_gravcomp_zeus.cpp.o
+.PHONY : 4dof_gravcomp_zeus.cpp.o
+
+4dof_gravcomp_zeus.i: 4dof_gravcomp_zeus.cpp.i
+
+.PHONY : 4dof_gravcomp_zeus.i
+
+# target to preprocess a source file
+4dof_gravcomp_zeus.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/4dof_gravcomp_zeus.cpp.i
+.PHONY : 4dof_gravcomp_zeus.cpp.i
+
+4dof_gravcomp_zeus.s: 4dof_gravcomp_zeus.cpp.s
+
+.PHONY : 4dof_gravcomp_zeus.s
+
+# target to generate assembly for a file
+4dof_gravcomp_zeus.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/4dof_gravcomp_zeus.cpp.s
+.PHONY : 4dof_gravcomp_zeus.cpp.s
 
 # Help Target
 help:
@@ -196,16 +196,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... 4dof_dynamics_compensation"
 	@echo "... rebuild_cache"
-	@echo "... 4dof_id_control"
-	@echo "... 4dof_dynamics_compensation.o"
-	@echo "... 4dof_dynamics_compensation.i"
-	@echo "... 4dof_dynamics_compensation.s"
-	@echo "... 4dof_id_control.o"
-	@echo "... 4dof_id_control.i"
-	@echo "... 4dof_id_control.s"
+	@echo "... edit_cache"
+	@echo "... 4dof_gravcomp_ares"
+	@echo "... 4dof_gravcomp_zeus"
+	@echo "... 4dof_gravcomp_ares.o"
+	@echo "... 4dof_gravcomp_ares.i"
+	@echo "... 4dof_gravcomp_ares.s"
+	@echo "... 4dof_gravcomp_zeus.o"
+	@echo "... 4dof_gravcomp_zeus.i"
+	@echo "... 4dof_gravcomp_zeus.s"
 .PHONY : help
 
 

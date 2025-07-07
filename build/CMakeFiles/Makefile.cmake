@@ -61,6 +61,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/4dof_dynamics_compensation.dir/DependInfo.cmake"
-  "CMakeFiles/4dof_id_control.dir/DependInfo.cmake"
+  "CMakeFiles/4dof_gravcomp_ares.dir/DependInfo.cmake"
+  "CMakeFiles/4dof_gravcomp_zeus.dir/DependInfo.cmake"
   )

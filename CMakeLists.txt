@@ -37,8 +37,8 @@ endfunction()
 
 
 add_programs(
-	4dof_id_control
-	4dof_dynamics_compensation
+	4dof_gravcomp_zeus
+	4dof_gravcomp_ares
     )
 
 
