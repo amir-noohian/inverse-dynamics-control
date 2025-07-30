@@ -1,4 +1,6 @@
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/rebuild_cache.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/edit_cache.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dyncomp_ares.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_gravcomp_ares.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dyncomp_zeus.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_gravcomp_zeus.dir

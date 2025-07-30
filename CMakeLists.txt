@@ -38,7 +38,9 @@ endfunction()
 
 add_programs(
 	4dof_gravcomp_zeus
+	4dof_dyncomp_zeus
 	4dof_gravcomp_ares
+	4dof_dyncomp_ares
     )
 
 

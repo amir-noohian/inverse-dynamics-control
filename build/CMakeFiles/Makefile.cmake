@@ -61,6 +61,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/4dof_dyncomp_ares.dir/DependInfo.cmake"
   "CMakeFiles/4dof_gravcomp_ares.dir/DependInfo.cmake"
+  "CMakeFiles/4dof_dyncomp_zeus.dir/DependInfo.cmake"
   "CMakeFiles/4dof_gravcomp_zeus.dir/DependInfo.cmake"
   )

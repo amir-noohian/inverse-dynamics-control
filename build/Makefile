@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named 4dof_dyncomp_ares
+
+# Build rule for target.
+4dof_dyncomp_ares: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_dyncomp_ares
+.PHONY : 4dof_dyncomp_ares
+
+# fast build rule for target.
+4dof_dyncomp_ares/fast:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_ares.dir/build.make CMakeFiles/4dof_dyncomp_ares.dir/build
+.PHONY : 4dof_dyncomp_ares/fast
+
+#=============================================================================
 # Target rules for targets named 4dof_gravcomp_ares
 
 # Build rule for target.
@@ -124,6 +137,19 @@ depend:
 .PHONY : 4dof_gravcomp_ares/fast
 
 #=============================================================================
+# Target rules for targets named 4dof_dyncomp_zeus
+
+# Build rule for target.
+4dof_dyncomp_zeus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_dyncomp_zeus
+.PHONY : 4dof_dyncomp_zeus
+
+# fast build rule for target.
+4dof_dyncomp_zeus/fast:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/build
+.PHONY : 4dof_dyncomp_zeus/fast
+
+#=============================================================================
 # Target rules for targets named 4dof_gravcomp_zeus
 
 # Build rule for target.
@@ -135,6 +161,60 @@ depend:
 4dof_gravcomp_zeus/fast:
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/build
 .PHONY : 4dof_gravcomp_zeus/fast
+
+4dof_dyncomp_ares.o: 4dof_dyncomp_ares.cpp.o
+
+.PHONY : 4dof_dyncomp_ares.o
+
+# target to build an object file
+4dof_dyncomp_ares.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_ares.dir/build.make CMakeFiles/4dof_dyncomp_ares.dir/4dof_dyncomp_ares.cpp.o
+.PHONY : 4dof_dyncomp_ares.cpp.o
+
+4dof_dyncomp_ares.i: 4dof_dyncomp_ares.cpp.i
+
+.PHONY : 4dof_dyncomp_ares.i
+
+# target to preprocess a source file
+4dof_dyncomp_ares.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_ares.dir/build.make CMakeFiles/4dof_dyncomp_ares.dir/4dof_dyncomp_ares.cpp.i
+.PHONY : 4dof_dyncomp_ares.cpp.i
+
+4dof_dyncomp_ares.s: 4dof_dyncomp_ares.cpp.s
+
+.PHONY : 4dof_dyncomp_ares.s
+
+# target to generate assembly for a file
+4dof_dyncomp_ares.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_ares.dir/build.make CMakeFiles/4dof_dyncomp_ares.dir/4dof_dyncomp_ares.cpp.s
+.PHONY : 4dof_dyncomp_ares.cpp.s
+
+4dof_dyncomp_zeus.o: 4dof_dyncomp_zeus.cpp.o
+
+.PHONY : 4dof_dyncomp_zeus.o
+
+# target to build an object file
+4dof_dyncomp_zeus.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/4dof_dyncomp_zeus.cpp.o
+.PHONY : 4dof_dyncomp_zeus.cpp.o
+
+4dof_dyncomp_zeus.i: 4dof_dyncomp_zeus.cpp.i
+
+.PHONY : 4dof_dyncomp_zeus.i
+
+# target to preprocess a source file
+4dof_dyncomp_zeus.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/4dof_dyncomp_zeus.cpp.i
+.PHONY : 4dof_dyncomp_zeus.cpp.i
+
+4dof_dyncomp_zeus.s: 4dof_dyncomp_zeus.cpp.s
+
+.PHONY : 4dof_dyncomp_zeus.s
+
+# target to generate assembly for a file
+4dof_dyncomp_zeus.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/4dof_dyncomp_zeus.cpp.s
+.PHONY : 4dof_dyncomp_zeus.cpp.s
 
 4dof_gravcomp_ares.o: 4dof_gravcomp_ares.cpp.o
 
@@ -198,8 +278,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... 4dof_dyncomp_ares"
 	@echo "... 4dof_gravcomp_ares"
+	@echo "... 4dof_dyncomp_zeus"
 	@echo "... 4dof_gravcomp_zeus"
+	@echo "... 4dof_dyncomp_ares.o"
+	@echo "... 4dof_dyncomp_ares.i"
+	@echo "... 4dof_dyncomp_ares.s"
+	@echo "... 4dof_dyncomp_zeus.o"
+	@echo "... 4dof_dyncomp_zeus.i"
+	@echo "... 4dof_dyncomp_zeus.s"
 	@echo "... 4dof_gravcomp_ares.o"
 	@echo "... 4dof_gravcomp_ares.i"
 	@echo "... 4dof_gravcomp_ares.s"
