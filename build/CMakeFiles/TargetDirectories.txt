@@ -1,6 +1,11 @@
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/rebuild_cache.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/edit_cache.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/compare_torque_7dof.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/compare_torque_4dof.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dyncompff_ares.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dyncomp_slax.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dyncomp_ares.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_gravcomp_ares.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_dyncomp_zeus.dir
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_gravcomp_slax.dir
 /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles/4dof_gravcomp_zeus.dir

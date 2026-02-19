@@ -53,9 +53,14 @@ CMAKE_BINARY_DIR = /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/b
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/compare_torque_7dof.dir/all
+all: CMakeFiles/compare_torque_4dof.dir/all
+all: CMakeFiles/4dof_dyncompff_ares.dir/all
+all: CMakeFiles/4dof_dyncomp_slax.dir/all
 all: CMakeFiles/4dof_dyncomp_ares.dir/all
 all: CMakeFiles/4dof_gravcomp_ares.dir/all
 all: CMakeFiles/4dof_dyncomp_zeus.dir/all
+all: CMakeFiles/4dof_gravcomp_slax.dir/all
 all: CMakeFiles/4dof_gravcomp_zeus.dir/all
 
 .PHONY : all
@@ -66,12 +71,125 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/compare_torque_7dof.dir/clean
+clean: CMakeFiles/compare_torque_4dof.dir/clean
+clean: CMakeFiles/4dof_dyncompff_ares.dir/clean
+clean: CMakeFiles/4dof_dyncomp_slax.dir/clean
 clean: CMakeFiles/4dof_dyncomp_ares.dir/clean
 clean: CMakeFiles/4dof_gravcomp_ares.dir/clean
 clean: CMakeFiles/4dof_dyncomp_zeus.dir/clean
+clean: CMakeFiles/4dof_gravcomp_slax.dir/clean
 clean: CMakeFiles/4dof_gravcomp_zeus.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/compare_torque_7dof.dir
+
+# All Build rule for target.
+CMakeFiles/compare_torque_7dof.dir/all:
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/depend
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=17,18 "Built target compare_torque_7dof"
+.PHONY : CMakeFiles/compare_torque_7dof.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/compare_torque_7dof.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compare_torque_7dof.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 0
+.PHONY : CMakeFiles/compare_torque_7dof.dir/rule
+
+# Convenience name for target.
+compare_torque_7dof: CMakeFiles/compare_torque_7dof.dir/rule
+
+.PHONY : compare_torque_7dof
+
+# clean rule for target.
+CMakeFiles/compare_torque_7dof.dir/clean:
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/clean
+.PHONY : CMakeFiles/compare_torque_7dof.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/compare_torque_4dof.dir
+
+# All Build rule for target.
+CMakeFiles/compare_torque_4dof.dir/all:
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/depend
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=15,16 "Built target compare_torque_4dof"
+.PHONY : CMakeFiles/compare_torque_4dof.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/compare_torque_4dof.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compare_torque_4dof.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 0
+.PHONY : CMakeFiles/compare_torque_4dof.dir/rule
+
+# Convenience name for target.
+compare_torque_4dof: CMakeFiles/compare_torque_4dof.dir/rule
+
+.PHONY : compare_torque_4dof
+
+# clean rule for target.
+CMakeFiles/compare_torque_4dof.dir/clean:
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/clean
+.PHONY : CMakeFiles/compare_torque_4dof.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/4dof_dyncompff_ares.dir
+
+# All Build rule for target.
+CMakeFiles/4dof_dyncompff_ares.dir/all:
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/depend
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=7,8 "Built target 4dof_dyncompff_ares"
+.PHONY : CMakeFiles/4dof_dyncompff_ares.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/4dof_dyncompff_ares.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/4dof_dyncompff_ares.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 0
+.PHONY : CMakeFiles/4dof_dyncompff_ares.dir/rule
+
+# Convenience name for target.
+4dof_dyncompff_ares: CMakeFiles/4dof_dyncompff_ares.dir/rule
+
+.PHONY : 4dof_dyncompff_ares
+
+# clean rule for target.
+CMakeFiles/4dof_dyncompff_ares.dir/clean:
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/clean
+.PHONY : CMakeFiles/4dof_dyncompff_ares.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/4dof_dyncomp_slax.dir
+
+# All Build rule for target.
+CMakeFiles/4dof_dyncomp_slax.dir/all:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/depend
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=3,4 "Built target 4dof_dyncomp_slax"
+.PHONY : CMakeFiles/4dof_dyncomp_slax.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/4dof_dyncomp_slax.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/4dof_dyncomp_slax.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 0
+.PHONY : CMakeFiles/4dof_dyncomp_slax.dir/rule
+
+# Convenience name for target.
+4dof_dyncomp_slax: CMakeFiles/4dof_dyncomp_slax.dir/rule
+
+.PHONY : 4dof_dyncomp_slax
+
+# clean rule for target.
+CMakeFiles/4dof_dyncomp_slax.dir/clean:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/clean
+.PHONY : CMakeFiles/4dof_dyncomp_slax.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/4dof_dyncomp_ares.dir
@@ -107,7 +225,7 @@ CMakeFiles/4dof_dyncomp_ares.dir/clean:
 CMakeFiles/4dof_gravcomp_ares.dir/all:
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/depend
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=5,6 "Built target 4dof_gravcomp_ares"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=9,10 "Built target 4dof_gravcomp_ares"
 .PHONY : CMakeFiles/4dof_gravcomp_ares.dir/all
 
 # Build rule for subdir invocation for target.
@@ -134,7 +252,7 @@ CMakeFiles/4dof_gravcomp_ares.dir/clean:
 CMakeFiles/4dof_dyncomp_zeus.dir/all:
 	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/depend
 	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=3,4 "Built target 4dof_dyncomp_zeus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=5,6 "Built target 4dof_dyncomp_zeus"
 .PHONY : CMakeFiles/4dof_dyncomp_zeus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,13 +273,40 @@ CMakeFiles/4dof_dyncomp_zeus.dir/clean:
 .PHONY : CMakeFiles/4dof_dyncomp_zeus.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/4dof_gravcomp_slax.dir
+
+# All Build rule for target.
+CMakeFiles/4dof_gravcomp_slax.dir/all:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/depend
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=11,12 "Built target 4dof_gravcomp_slax"
+.PHONY : CMakeFiles/4dof_gravcomp_slax.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/4dof_gravcomp_slax.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/4dof_gravcomp_slax.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles 0
+.PHONY : CMakeFiles/4dof_gravcomp_slax.dir/rule
+
+# Convenience name for target.
+4dof_gravcomp_slax: CMakeFiles/4dof_gravcomp_slax.dir/rule
+
+.PHONY : 4dof_gravcomp_slax
+
+# clean rule for target.
+CMakeFiles/4dof_gravcomp_slax.dir/clean:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/clean
+.PHONY : CMakeFiles/4dof_gravcomp_slax.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/4dof_gravcomp_zeus.dir
 
 # All Build rule for target.
 CMakeFiles/4dof_gravcomp_zeus.dir/all:
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/depend
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=7,8 "Built target 4dof_gravcomp_zeus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/build/CMakeFiles --progress-num=13,14 "Built target 4dof_gravcomp_zeus"
 .PHONY : CMakeFiles/4dof_gravcomp_zeus.dir/all
 
 # Build rule for subdir invocation for target.

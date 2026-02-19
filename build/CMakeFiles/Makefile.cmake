@@ -16,6 +16,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.71.0.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config-version.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.71.0/boost_iostreams-config-version.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.71.0/boost_iostreams-config.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.71.0/libboost_iostreams-variant-shared.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.71.0/libboost_iostreams-variant-static.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/boost_system-config-version.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/boost_system-config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/libboost_system-variant-shared.cmake"
@@ -61,8 +65,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/compare_torque_7dof.dir/DependInfo.cmake"
+  "CMakeFiles/compare_torque_4dof.dir/DependInfo.cmake"
+  "CMakeFiles/4dof_dyncompff_ares.dir/DependInfo.cmake"
+  "CMakeFiles/4dof_dyncomp_slax.dir/DependInfo.cmake"
   "CMakeFiles/4dof_dyncomp_ares.dir/DependInfo.cmake"
   "CMakeFiles/4dof_gravcomp_ares.dir/DependInfo.cmake"
   "CMakeFiles/4dof_dyncomp_zeus.dir/DependInfo.cmake"
+  "CMakeFiles/4dof_gravcomp_slax.dir/DependInfo.cmake"
   "CMakeFiles/4dof_gravcomp_zeus.dir/DependInfo.cmake"
   )

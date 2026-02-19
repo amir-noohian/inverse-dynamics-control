@@ -3,7 +3,7 @@
 
 CMakeFiles/4dof_dyncomp_ares.dir/4dof_dyncomp_ares.cpp.o
  ../include/W.hpp
- ../include/beta_ares.hpp
+ ../include/beta_ares_link.hpp
  ../include/constant_vel_refference_traj.hpp
  ../include/dynamics_4dof_ares.hpp
  ../include/sin_jp_trajectory.hpp

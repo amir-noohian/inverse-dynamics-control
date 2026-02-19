@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../"
   "../include"
   "/usr/local/include/eigen3"
+  "../extern"
   )
 
 # Targets to which this target links.

@@ -14,7 +14,7 @@ array
 cmath
 -
 
-../include/beta_ares.hpp
+../include/beta_ares_link.hpp
 eigen3/Eigen/Dense
 -
 
@@ -33,7 +33,7 @@ barrett/systems.h
 -
 barrett/math/kinematics.h
 -
-beta_ares.hpp
+beta_ares_link.hpp
 -
 W.hpp
 -

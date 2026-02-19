@@ -111,6 +111,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named compare_torque_7dof
+
+# Build rule for target.
+compare_torque_7dof: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compare_torque_7dof
+.PHONY : compare_torque_7dof
+
+# fast build rule for target.
+compare_torque_7dof/fast:
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/build
+.PHONY : compare_torque_7dof/fast
+
+#=============================================================================
+# Target rules for targets named compare_torque_4dof
+
+# Build rule for target.
+compare_torque_4dof: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compare_torque_4dof
+.PHONY : compare_torque_4dof
+
+# fast build rule for target.
+compare_torque_4dof/fast:
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/build
+.PHONY : compare_torque_4dof/fast
+
+#=============================================================================
+# Target rules for targets named 4dof_dyncompff_ares
+
+# Build rule for target.
+4dof_dyncompff_ares: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_dyncompff_ares
+.PHONY : 4dof_dyncompff_ares
+
+# fast build rule for target.
+4dof_dyncompff_ares/fast:
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/build
+.PHONY : 4dof_dyncompff_ares/fast
+
+#=============================================================================
+# Target rules for targets named 4dof_dyncomp_slax
+
+# Build rule for target.
+4dof_dyncomp_slax: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_dyncomp_slax
+.PHONY : 4dof_dyncomp_slax
+
+# fast build rule for target.
+4dof_dyncomp_slax/fast:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/build
+.PHONY : 4dof_dyncomp_slax/fast
+
+#=============================================================================
 # Target rules for targets named 4dof_dyncomp_ares
 
 # Build rule for target.
@@ -148,6 +200,19 @@ depend:
 4dof_dyncomp_zeus/fast:
 	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/build
 .PHONY : 4dof_dyncomp_zeus/fast
+
+#=============================================================================
+# Target rules for targets named 4dof_gravcomp_slax
+
+# Build rule for target.
+4dof_gravcomp_slax: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 4dof_gravcomp_slax
+.PHONY : 4dof_gravcomp_slax
+
+# fast build rule for target.
+4dof_gravcomp_slax/fast:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/build
+.PHONY : 4dof_gravcomp_slax/fast
 
 #=============================================================================
 # Target rules for targets named 4dof_gravcomp_zeus
@@ -189,6 +254,33 @@ depend:
 	$(MAKE) -f CMakeFiles/4dof_dyncomp_ares.dir/build.make CMakeFiles/4dof_dyncomp_ares.dir/4dof_dyncomp_ares.cpp.s
 .PHONY : 4dof_dyncomp_ares.cpp.s
 
+4dof_dyncomp_slax.o: 4dof_dyncomp_slax.cpp.o
+
+.PHONY : 4dof_dyncomp_slax.o
+
+# target to build an object file
+4dof_dyncomp_slax.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/4dof_dyncomp_slax.cpp.o
+.PHONY : 4dof_dyncomp_slax.cpp.o
+
+4dof_dyncomp_slax.i: 4dof_dyncomp_slax.cpp.i
+
+.PHONY : 4dof_dyncomp_slax.i
+
+# target to preprocess a source file
+4dof_dyncomp_slax.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/4dof_dyncomp_slax.cpp.i
+.PHONY : 4dof_dyncomp_slax.cpp.i
+
+4dof_dyncomp_slax.s: 4dof_dyncomp_slax.cpp.s
+
+.PHONY : 4dof_dyncomp_slax.s
+
+# target to generate assembly for a file
+4dof_dyncomp_slax.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_dyncomp_slax.dir/build.make CMakeFiles/4dof_dyncomp_slax.dir/4dof_dyncomp_slax.cpp.s
+.PHONY : 4dof_dyncomp_slax.cpp.s
+
 4dof_dyncomp_zeus.o: 4dof_dyncomp_zeus.cpp.o
 
 .PHONY : 4dof_dyncomp_zeus.o
@@ -215,6 +307,33 @@ depend:
 4dof_dyncomp_zeus.cpp.s:
 	$(MAKE) -f CMakeFiles/4dof_dyncomp_zeus.dir/build.make CMakeFiles/4dof_dyncomp_zeus.dir/4dof_dyncomp_zeus.cpp.s
 .PHONY : 4dof_dyncomp_zeus.cpp.s
+
+4dof_dyncompff_ares.o: 4dof_dyncompff_ares.cpp.o
+
+.PHONY : 4dof_dyncompff_ares.o
+
+# target to build an object file
+4dof_dyncompff_ares.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/4dof_dyncompff_ares.cpp.o
+.PHONY : 4dof_dyncompff_ares.cpp.o
+
+4dof_dyncompff_ares.i: 4dof_dyncompff_ares.cpp.i
+
+.PHONY : 4dof_dyncompff_ares.i
+
+# target to preprocess a source file
+4dof_dyncompff_ares.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/4dof_dyncompff_ares.cpp.i
+.PHONY : 4dof_dyncompff_ares.cpp.i
+
+4dof_dyncompff_ares.s: 4dof_dyncompff_ares.cpp.s
+
+.PHONY : 4dof_dyncompff_ares.s
+
+# target to generate assembly for a file
+4dof_dyncompff_ares.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_dyncompff_ares.dir/build.make CMakeFiles/4dof_dyncompff_ares.dir/4dof_dyncompff_ares.cpp.s
+.PHONY : 4dof_dyncompff_ares.cpp.s
 
 4dof_gravcomp_ares.o: 4dof_gravcomp_ares.cpp.o
 
@@ -243,6 +362,33 @@ depend:
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_ares.dir/build.make CMakeFiles/4dof_gravcomp_ares.dir/4dof_gravcomp_ares.cpp.s
 .PHONY : 4dof_gravcomp_ares.cpp.s
 
+4dof_gravcomp_slax.o: 4dof_gravcomp_slax.cpp.o
+
+.PHONY : 4dof_gravcomp_slax.o
+
+# target to build an object file
+4dof_gravcomp_slax.cpp.o:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/4dof_gravcomp_slax.cpp.o
+.PHONY : 4dof_gravcomp_slax.cpp.o
+
+4dof_gravcomp_slax.i: 4dof_gravcomp_slax.cpp.i
+
+.PHONY : 4dof_gravcomp_slax.i
+
+# target to preprocess a source file
+4dof_gravcomp_slax.cpp.i:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/4dof_gravcomp_slax.cpp.i
+.PHONY : 4dof_gravcomp_slax.cpp.i
+
+4dof_gravcomp_slax.s: 4dof_gravcomp_slax.cpp.s
+
+.PHONY : 4dof_gravcomp_slax.s
+
+# target to generate assembly for a file
+4dof_gravcomp_slax.cpp.s:
+	$(MAKE) -f CMakeFiles/4dof_gravcomp_slax.dir/build.make CMakeFiles/4dof_gravcomp_slax.dir/4dof_gravcomp_slax.cpp.s
+.PHONY : 4dof_gravcomp_slax.cpp.s
+
 4dof_gravcomp_zeus.o: 4dof_gravcomp_zeus.cpp.o
 
 .PHONY : 4dof_gravcomp_zeus.o
@@ -270,6 +416,60 @@ depend:
 	$(MAKE) -f CMakeFiles/4dof_gravcomp_zeus.dir/build.make CMakeFiles/4dof_gravcomp_zeus.dir/4dof_gravcomp_zeus.cpp.s
 .PHONY : 4dof_gravcomp_zeus.cpp.s
 
+compare_torque_4dof.o: compare_torque_4dof.cpp.o
+
+.PHONY : compare_torque_4dof.o
+
+# target to build an object file
+compare_torque_4dof.cpp.o:
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/compare_torque_4dof.cpp.o
+.PHONY : compare_torque_4dof.cpp.o
+
+compare_torque_4dof.i: compare_torque_4dof.cpp.i
+
+.PHONY : compare_torque_4dof.i
+
+# target to preprocess a source file
+compare_torque_4dof.cpp.i:
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/compare_torque_4dof.cpp.i
+.PHONY : compare_torque_4dof.cpp.i
+
+compare_torque_4dof.s: compare_torque_4dof.cpp.s
+
+.PHONY : compare_torque_4dof.s
+
+# target to generate assembly for a file
+compare_torque_4dof.cpp.s:
+	$(MAKE) -f CMakeFiles/compare_torque_4dof.dir/build.make CMakeFiles/compare_torque_4dof.dir/compare_torque_4dof.cpp.s
+.PHONY : compare_torque_4dof.cpp.s
+
+compare_torque_7dof.o: compare_torque_7dof.cpp.o
+
+.PHONY : compare_torque_7dof.o
+
+# target to build an object file
+compare_torque_7dof.cpp.o:
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/compare_torque_7dof.cpp.o
+.PHONY : compare_torque_7dof.cpp.o
+
+compare_torque_7dof.i: compare_torque_7dof.cpp.i
+
+.PHONY : compare_torque_7dof.i
+
+# target to preprocess a source file
+compare_torque_7dof.cpp.i:
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/compare_torque_7dof.cpp.i
+.PHONY : compare_torque_7dof.cpp.i
+
+compare_torque_7dof.s: compare_torque_7dof.cpp.s
+
+.PHONY : compare_torque_7dof.s
+
+# target to generate assembly for a file
+compare_torque_7dof.cpp.s:
+	$(MAKE) -f CMakeFiles/compare_torque_7dof.dir/build.make CMakeFiles/compare_torque_7dof.dir/compare_torque_7dof.cpp.s
+.PHONY : compare_torque_7dof.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -278,22 +478,42 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... compare_torque_7dof"
+	@echo "... compare_torque_4dof"
+	@echo "... 4dof_dyncompff_ares"
+	@echo "... 4dof_dyncomp_slax"
 	@echo "... 4dof_dyncomp_ares"
 	@echo "... 4dof_gravcomp_ares"
 	@echo "... 4dof_dyncomp_zeus"
+	@echo "... 4dof_gravcomp_slax"
 	@echo "... 4dof_gravcomp_zeus"
 	@echo "... 4dof_dyncomp_ares.o"
 	@echo "... 4dof_dyncomp_ares.i"
 	@echo "... 4dof_dyncomp_ares.s"
+	@echo "... 4dof_dyncomp_slax.o"
+	@echo "... 4dof_dyncomp_slax.i"
+	@echo "... 4dof_dyncomp_slax.s"
 	@echo "... 4dof_dyncomp_zeus.o"
 	@echo "... 4dof_dyncomp_zeus.i"
 	@echo "... 4dof_dyncomp_zeus.s"
+	@echo "... 4dof_dyncompff_ares.o"
+	@echo "... 4dof_dyncompff_ares.i"
+	@echo "... 4dof_dyncompff_ares.s"
 	@echo "... 4dof_gravcomp_ares.o"
 	@echo "... 4dof_gravcomp_ares.i"
 	@echo "... 4dof_gravcomp_ares.s"
+	@echo "... 4dof_gravcomp_slax.o"
+	@echo "... 4dof_gravcomp_slax.i"
+	@echo "... 4dof_gravcomp_slax.s"
 	@echo "... 4dof_gravcomp_zeus.o"
 	@echo "... 4dof_gravcomp_zeus.i"
 	@echo "... 4dof_gravcomp_zeus.s"
+	@echo "... compare_torque_4dof.o"
+	@echo "... compare_torque_4dof.i"
+	@echo "... compare_torque_4dof.s"
+	@echo "... compare_torque_7dof.o"
+	@echo "... compare_torque_7dof.i"
+	@echo "... compare_torque_7dof.s"
 .PHONY : help
 
 

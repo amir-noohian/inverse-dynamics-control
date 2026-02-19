@@ -6,5 +6,5 @@ CXX_FLAGS = -O2 -g -DNDEBUG
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/rowley/amir/inverse_dynamics/inverse-dynamics-control -I/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/include -I/usr/local/include/eigen3 
+CXX_INCLUDES = -I/home/rowley/amir/inverse_dynamics/inverse-dynamics-control -I/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/include -I/usr/local/include/eigen3 -I/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/extern 
 

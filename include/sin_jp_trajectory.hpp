@@ -37,8 +37,8 @@ protected:
 	virtual void operate() {
         t = this->timef.getValue();
         refPTrack = A * cos(2 * M_PI * f* t) - A + start_pose;
-        refVTrack = -1 * A * 2 * M_PI * f * sin(2 * M_PI * f * t);
-        refATrack = -1 * A * pow(2 * M_PI * f, 2) * cos(2 * M_PI * f * t);
+        refVTrack = 0.0 * -1 * A * 2 * M_PI * f * sin(2 * M_PI * f * t);
+        refATrack = 0.0* -1 * A * pow(2 * M_PI * f, 2) * cos(2 * M_PI * f * t);
 
 		referencePOpValue->setData(&refPTrack);
 		referenceVOpValue->setData(&refVTrack);

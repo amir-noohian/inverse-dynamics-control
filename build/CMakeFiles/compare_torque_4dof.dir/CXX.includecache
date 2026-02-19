@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/W.hpp
+eigen3/Eigen/Dense
+-
+array
+-
+cmath
+-
+
+../include/beta_ares_link.hpp
+eigen3/Eigen/Dense
+-
+
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/compare_torque_4dof.cpp
+eigen3/Eigen/Dense
+-
+iostream
+-
+fstream
+-
+vector
+-
+string
+-
+sstream
+-
+cmath
+-
+cassert
+-
+cstdio
+-
+W.hpp
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/W.hpp
+beta_ares_link.hpp
+/home/rowley/amir/inverse_dynamics/inverse-dynamics-control/beta_ares_link.hpp
+
